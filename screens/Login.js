@@ -28,7 +28,8 @@ export default function LoginScreen({navigation}){
                 await AsyncStorage.setItem(TOKEN_NAME, response.token);
                 console.log(await AsyncStorage.getItem(TOKEN_NAME));
                 setIsLogin(true);
-                navigation.navigate("Home");
+                // navigation.navigate("Home");
+                navigation.goBack();
               }
               catch(error){
                 ToastAndroid.show(error, ToastAndroid.SHORT);

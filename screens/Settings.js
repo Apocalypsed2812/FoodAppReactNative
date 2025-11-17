@@ -30,19 +30,27 @@ export default function SettingsScreen({navigation}){
     }
 
     const handleCart = () => {
-      navigation.navigate('Cart')
+      // navigation.navigate('Cart')
+      navigation.navigate("CartTab");
     }
 
     const handleOrder = () => {
-      navigation.navigate('Orders')
+      // navigation.navigate('Orders')
+      navigation.navigate("OrderTab");
     }
 
     const handleHome = () => {
-      navigation.navigate('Home')
+      // navigation.navigate('Home')
+      navigation.navigate("CategoryTab", {
+        screen: "Home"
+      });
     }
 
     const handleChangePassword = () => {
-      navigation.navigate('ChangePassword')
+      // navigation.navigate('ChangePassword')
+      navigation.navigate("CategoryTab", {
+        screen: "ChangePassword"
+      });
     }
 
     SettingsScreen.navigationOptions = {

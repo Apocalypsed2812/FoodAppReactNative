@@ -175,7 +175,8 @@ export default function HomeScreen({navigation}){
                     horizontal={true}
                     >
                       {products.map((item, index) => (
-                        <TouchableOpacity style={styles.product} key={index} onPress={() => {navigation.navigate("ProductDetail", {product: item})}}>
+                        // <TouchableOpacity style={styles.product} key={index} onPress={() => {navigation.navigate("ProductDetail", {product: item})}}>
+                        <TouchableOpacity style={styles.product} key={index} onPress={() => {navigation.push("ProductDetail", { product: item })}}>
                           <View style={{flex: 2}}>
                             <Image source={{uri: item.image_url}} style={styles.product_image}/>
                           </View>

@@ -6,9 +6,10 @@ import {Text, StyleSheet, View, Image, ScrollView, ToastAndroid} from 'react-nat
 import { postMethod } from "../utils/fetchData";
 import {GlobalState} from '../context/GlobalState';
 
-export default function ProductDetail({navigation}){
+export default function ProductDetail({route, navigation}){
     ProductDetail.navigationOptions = {
-        title: navigation.getParam('product').name
+        // title: navigation.getParam('product').name
+        title: route.params.product.name
     };
 
     const state = useContext(GlobalState);
@@ -16,7 +17,7 @@ export default function ProductDetail({navigation}){
     const [cart, setCart] = state.UserAPI.cart;
     const [productsShow, setProductsShow] = state.ProductAPI.productsShow;
 
-    let product = navigation.getParam('product');
+    let product = route.params.product;
     
     const handleAddToCart = () => {
         if (!isLogin) {

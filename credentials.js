@@ -5,7 +5,7 @@ export const TOKEN_NAME = "token_user_vt_ecommerce_name"
 // export const SERVER_API = "https://food-shop-api.herokuapp.com/api/"
 // export const SERVER_API = 'https://food-app-api.vercel.app/api/';
 // export const SERVER_API = 'https://elated-actually-sodalite.glitch.me/api/';
-export const SERVER_API = 'https://tiki-react-api.onrender.com/api/';
+export const SERVER_API = 'https://foodappnodeapi-5g93.onrender.com/api/';
 
 
 

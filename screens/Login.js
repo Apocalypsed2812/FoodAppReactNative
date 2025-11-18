@@ -29,7 +29,11 @@ export default function LoginScreen({navigation}){
                 console.log(await AsyncStorage.getItem(TOKEN_NAME));
                 setIsLogin(true);
                 // navigation.navigate("Home");
-                navigation.goBack();
+                // navigation.goBack();
+                navigation.navigate("MainTabs", {
+                  screen: "CategoryTab",
+                  params: { screen: "Home" }
+                });
               }
               catch(error){
                 ToastAndroid.show(error, ToastAndroid.SHORT);
